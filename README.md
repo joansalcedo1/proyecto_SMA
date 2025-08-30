@@ -18,9 +18,10 @@ Este repositorio contiene el código fuente, assets y documentación relacionado
 ⚙️ Instalación y Configuración
 --
 - Clonar el repositorio:
-  bash
-  git clone (https://github.com/joansalcedo1/proyecto_SMA/)
-  cd tu-repo
+  ```bash
+git clone https://github.com/joansalcedo1/proyecto_SMA
+cd proyecto_SMA
+````
 - Abrir en Unity Hub:
     - Añadir la carpeta del proyecto.
     - Abrir con la versión de Unity recomendada (LTS).
