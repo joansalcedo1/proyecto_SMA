@@ -19,7 +19,7 @@ Este repositorio contiene el código fuente, assets y documentación relacionado
 --
 - Clonar el repositorio:
 
-  ````bash
+  ``bash
 git clone https://github.com/joansalcedo1/proyecto_SMA
 cd proyecto_SMA
 ``
