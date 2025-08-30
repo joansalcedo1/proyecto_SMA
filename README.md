@@ -31,11 +31,11 @@ cd proyecto_SMA
 
 🌱 Flujo de Trabajo (GitFlow)
 --
-main: Contiene versiones estables y listas para producción.
+- ``main``: Contiene versiones estables y listas para producción.
 
-develop: Rama de integración, base para nuevas funcionalidades.
+- ``develop``: Rama de integración, base para nuevas funcionalidades.
 
-feature/*: Ramas para desarrollo de características específicas.
+- ``feature``: Ramas para desarrollo de características específicas.
 
 🧪 Entornos
 --
