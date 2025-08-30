@@ -1,9 +1,9 @@
 # proyecto_SMA
 
 Proyecto académico de la materia sistemas multimedia audiovisuales, creado con Unity y gestionada mediante GitHub.
-
-📌 Descripción del Proyecto
 ---
+📌 Descripción del Proyecto
+
 Este repositorio contiene el código fuente, assets y documentación relacionados con el desarrollo de una novela visual implementada en Unity. El proyecto busca combinar narrativa interactiva, elementos visuales y toma de decisiones, ofreciendo al jugador una experiencia inmersiva.
 
 🛠️ Stack Tecnológico
