@@ -39,10 +39,10 @@ cd proyecto_SMA
 
 🧪 Entornos
 --
-/*Desarrollo*/: trabajo local en Unity.
+**Desarrollo:** trabajo local en Unity.
 
-Integración continua: GitHub Actions para builds y validación.
+**Integración continua:** GitHub Actions para builds y validación.
 
-Pruebas: builds intermedias (.exe / .apk) para QA.
+**Pruebas:** builds intermedias (.apk) para QA.
 
-Producción: entregables finales.
+**Producción:** entregables finales.
