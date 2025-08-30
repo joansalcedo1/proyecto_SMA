@@ -16,7 +16,7 @@ Este repositorio contiene el código fuente, assets y documentación relacionado
 
 
 ⚙️ Instalación y Configuración
-
+--
 - Clonar el repositorio:
   git clone https://github.com/tu-usuario/tu-repo.git
   cd tu-repo
@@ -25,17 +25,17 @@ Este repositorio contiene el código fuente, assets y documentación relacionado
     - Abrir con la versión de Unity recomendada (LTS).
 - Compilar/ejecutar desde el editor de Unity.
 
---
-  🌱 Flujo de Trabajo (GitFlow)
 
+🌱 Flujo de Trabajo (GitFlow)
+--
 main: Contiene versiones estables y listas para producción.
 
 develop: Rama de integración, base para nuevas funcionalidades.
 
 feature/*: Ramas para desarrollo de características específicas.
---
-🧪 Entornos
 
+🧪 Entornos
+--
 Desarrollo: trabajo local en Unity.
 
 Integración continua: GitHub Actions para builds y validación.
