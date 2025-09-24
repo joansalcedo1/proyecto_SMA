@@ -1,7 +1,13 @@
+using System;
 using UnityEngine;
 
 public class toolsManager : MonoBehaviour
 {
+    
+    public void cargarInsignias()
+    {
+        
+    }
     public void QuitApp()
     {
         // Cierra la aplicación en un dispositivo móvil
