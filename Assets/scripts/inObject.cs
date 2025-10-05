@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class inObject : MonoBehaviour
+public class InObject : MonoBehaviour
 {
     public string id;
 
