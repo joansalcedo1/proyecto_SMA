@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bdb5bdd15545384d82ec6f09728b504, type: 3}
+  m_Name: 2_SanAntonio
+  m_EditorClassIdentifier: 
+  capituloId: 2
+  nombreCapitulo: San antonio
+  sprite:
+  - {fileID: 21300000, guid: 280fe097d439fa94892a2fc32f18be1f, type: 3}
+  - {fileID: 21300000, guid: 9ca2dfccabcf32341833aebafb18675e, type: 3}
+  - {fileID: 21300000, guid: 73feb73914bf97345b387c44b468a86b, type: 3}
+  - {fileID: 21300000, guid: 2d5c6b8abc3209244a8cff9868501e00, type: 3}
+  - {fileID: 21300000, guid: 5b5d2a723fa205545938f55ff78bbc73, type: 3}
+  interactbleObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  infoBotones:
+  - nombreCapitulo: Rio Cali
+    idCapitulo: 3
+  - nombreCapitulo: Boulevard
+    idCapitulo: 1
