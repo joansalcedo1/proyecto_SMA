@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class toolsManager : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class toolsManager : MonoBehaviour
     public void cargarInsignias()
     {
         
+    }
+    public void cambioEscena(int idSiguienteEscena)
+    {
+        SceneManager.LoadScene(idSiguienteEscena);
     }
     public void QuitApp()
     {

@@ -9,7 +9,7 @@ public class ScriptableCapituloData : ScriptableObject
     public int capituloId;
     public string nombreCapitulo;
     public Sprite[] sprite= new Sprite[4];
-    public GameObject[] objects = new GameObject[4];
+    public GameObject[] interactbleObjects = new GameObject[4];
     public ButtonData[] infoBotones = new ButtonData[2];
 
     [System.Serializable]

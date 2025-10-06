@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bdb5bdd15545384d82ec6f09728b504, type: 3}
-  m_Name: 1_BoulevardDelRio
+  m_Name: 4_PascualGuerrero
   m_EditorClassIdentifier: 
-  capituloId: 1
-  nombreCapitulo: Boulevard del rio
+  capituloId: 0
+  nombreCapitulo: Pascual Guerrero
   sprite:
-  - {fileID: 21300000, guid: 277694502066cdf4ea31180b839b8cc6, type: 3}
-  - {fileID: 21300000, guid: a289abca2a4bd3d41b2e6a0118c813d4, type: 3}
-  - {fileID: 21300000, guid: 52e07c5924769e84e8bb53c4a440d96a, type: 3}
-  - {fileID: 21300000, guid: 293daa11761a03e4c81075ad817dadcb, type: 3}
+  - {fileID: 21300000, guid: 5a1f68a5def1b20448173cbc783e7a17, type: 3}
+  - {fileID: 21300000, guid: 26beb0902d4f0074ba2db99d8ca379cb, type: 3}
+  - {fileID: 21300000, guid: 1338136b5b3073245a1d6165e942e035, type: 3}
+  - {fileID: 21300000, guid: 2323ac325bd87b249869dbbb9fe70d71, type: 3}
   interactbleObjects:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   infoBotones:
-  - nombreCapitulo: San antonio
-    idCapitulo: 2
+  - nombreCapitulo: Biblioteca departamental
+    idCapitulo: 5
+  - nombreCapitulo: Iglesia la Merced
+    idCapitulo: 6
