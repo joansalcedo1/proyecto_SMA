@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NUnit.Framework.Internal;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,21 +40,21 @@ public class ReaderController : MonoBehaviour
     {
         int idCapituloAcambiar = capitulosData[idCapituloActual].infoBotones[0].idCapitulo;
         Debug.Log($"Capitulo actual:{idCapituloActual}, capitulo a cambiar{idCapituloAcambiar}");
-        Debug.Log($"Se cambió al capitulo con ID {idCapituloAcambiar} y nombre {capitulosData[idCapituloActual].infoBotones[0].nombreCapitulo}");
+        Debug.Log($"Se cambiï¿½ al capitulo con ID {idCapituloAcambiar} y nombre {capitulosData[idCapituloActual].infoBotones[0].nombreCapitulo}");
         idCapituloActual = idCapituloAcambiar;
 
     }
     public void cambiar2Cap()
     {
         int idCapituloAcambiar = capitulosData[idCapituloActual].infoBotones[1].idCapitulo;
-        Debug.Log($"Se cambió al capitulo con ID {idCapituloAcambiar} y nombre {capitulosData[idCapituloActual].infoBotones[1].nombreCapitulo}");
+        Debug.Log($"Se cambiï¿½ al capitulo con ID {idCapituloAcambiar} y nombre {capitulosData[idCapituloActual].infoBotones[1].nombreCapitulo}");
         idCapituloActual = idCapituloAcambiar;
 
     }
-    void verificar2OpcionBtn()
+    void verificar2OpcionBtn(bool test = false)
     {
         int cantidadOpciones = capitulosData[idCapituloActual].infoBotones.Length;
-        
+
         if (cantidadOpciones > 1)
         {
             cambioCap1_btn.interactable = true;
@@ -62,16 +63,23 @@ public class ReaderController : MonoBehaviour
         {
             cambioCap1_btn.interactable = false;
         }
+
+        if (test) { Debug.Log($"Cantidad de opciones: {cantidadOpciones}"); }
     }
-    void verificarUltimoCap()
+    void verificarUltimoCap(bool test = false)
     {
         int cantidadOpciones = capitulosData[idCapituloActual].infoBotones.Length;
-        if(cantidadOpciones < 1)
+        if (cantidadOpciones < 1)
         {
             cambioCap0_btn.onClick.RemoveAllListeners();
             cambioCap0_btn.onClick.AddListener(() => toolsManager.cambioEscena(3));
+            if (test) { Debug.Log("Ultimo capitulo, se cambia la funcionalidad del boton a cambio de escena"); }
 
+            return;
         }
+
+        if(test) { Debug.Log($"Cantidad de opciones: {cantidadOpciones}"); }
+
     }
     // Update is called once per frame
     void Update()
@@ -84,4 +92,17 @@ public class ReaderController : MonoBehaviour
         verificar2OpcionBtn();
         verificarUltimoCap();
     }
+
+    #region TEST
+    [ContextMenu("Test Verificar 2 Opcion Btn")]
+    void TestVerificar2OpcionBtn()
+    {
+        verificar2OpcionBtn(true);
+    }
+    [ContextMenu("Test Verificar Ultimo Cap")]
+    void TestVerificarUltimoCap()
+    {
+        verificarUltimoCap(true);
+    }
+    #endregion
 }
