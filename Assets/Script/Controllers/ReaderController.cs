@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ReaderController : MonoBehaviour
 {
+    [SerializeField] private GameObject panelEleccion;
     [SerializeField]
     private List<ScriptableCapituloData> capitulosData;
     [SerializeField]
@@ -26,6 +27,7 @@ public class ReaderController : MonoBehaviour
     }
     private void Awake()
     {
+        panelEleccion.SetActive(true);
         escenario1 = escenario1.GetComponent<Image>();
         escenario2 = escenario2.GetComponent<Image>();
         escenario3 = escenario3.GetComponent<Image>();
@@ -81,6 +83,24 @@ public class ReaderController : MonoBehaviour
         if(test) { Debug.Log($"Cantidad de opciones: {cantidadOpciones}"); }
 
     }
+    public void ElegirCapitulo(int idCapitulo) //Este método está sujeto a cambios futuros
+{
+    if (idCapitulo >= 0 && idCapitulo < capitulosData.Count)
+    {
+        idCapituloActual = idCapitulo;
+        titulo.text = capitulosData[idCapitulo].nombreCapitulo;
+        escenario1.sprite = capitulosData[idCapitulo].sprite[0];
+        escenario2.sprite = capitulosData[idCapitulo].sprite[1];
+        escenario3.sprite = capitulosData[idCapitulo].sprite[2];
+        escenario4.sprite = capitulosData[idCapitulo].sprite[3];
+
+        Debug.Log($"Cambiado al capítulo {idCapitulo}: {capitulosData[idCapitulo].nombreCapitulo}");
+    }
+    else
+    {
+        Debug.LogWarning($"ID de capítulo {idCapitulo} fuera de rango");
+    }
+}
     // Update is called once per frame
     void Update()
     {
