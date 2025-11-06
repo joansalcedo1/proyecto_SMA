@@ -10,12 +10,14 @@ public class ScriptableCapituloData : ScriptableObject
     public string nombreCapitulo;
     public Sprite[] sprite= new Sprite[4];
     public GameObject[] interactbleObjects = new GameObject[4];
-    public ButtonData[] infoBotones = new ButtonData[2];
+    public bool fueLeido = false;
+    public bool esCapituloFinal = false;
+    /*public ButtonData[] infoBotones = new ButtonData[2];
 
     [System.Serializable]
     public struct ButtonData 
     { 
         public string nombreCapitulo;
         public int idCapitulo;
-    }
+    }*/
 }

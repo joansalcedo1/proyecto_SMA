@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bdb5bdd15545384d82ec6f09728b504, type: 3}
   m_Name: 6_IglesiaMerced
   m_EditorClassIdentifier: 
-  capituloId: 0
+  capituloId: 6
   nombreCapitulo: Iglesia la merced
   sprite:
   - {fileID: 21300000, guid: 94d975a6586c6c641aa1dc140c5d4b5c, type: 3}
@@ -24,6 +24,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  infoBotones:
-  - nombreCapitulo: Taller
-    idCapitulo: 7
+  fueLeido: 0
+  esCapituloFinal: 0

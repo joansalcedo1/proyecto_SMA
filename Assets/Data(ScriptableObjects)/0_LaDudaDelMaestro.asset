@@ -24,8 +24,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  infoBotones:
-  - nombreCapitulo: Boulevard Del lRio
-    idCapitulo: 1
-  - nombreCapitulo: San Antonio
-    idCapitulo: 2
+  fueLeido: 0
+  esCapituloFinal: 0

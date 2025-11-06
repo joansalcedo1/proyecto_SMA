@@ -25,8 +25,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  infoBotones:
-  - nombreCapitulo: Rio Cali
-    idCapitulo: 3
-  - nombreCapitulo: Boulevard
-    idCapitulo: 1
+  fueLeido: 0
+  esCapituloFinal: 0

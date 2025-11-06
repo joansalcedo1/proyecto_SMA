@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bdb5bdd15545384d82ec6f09728b504, type: 3}
   m_Name: 4_PascualGuerrero
   m_EditorClassIdentifier: 
-  capituloId: 0
+  capituloId: 4
   nombreCapitulo: Pascual Guerrero
   sprite:
   - {fileID: 21300000, guid: 5a1f68a5def1b20448173cbc783e7a17, type: 3}
@@ -24,8 +24,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  infoBotones:
-  - nombreCapitulo: Biblioteca departamental
-    idCapitulo: 5
-  - nombreCapitulo: Iglesia la Merced
-    idCapitulo: 6
+  fueLeido: 0
+  esCapituloFinal: 0
