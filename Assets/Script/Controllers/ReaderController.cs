@@ -8,8 +8,11 @@ using UnityEngine.UI;
 
 public class ReaderController : MonoBehaviour
 {
+    private static WaitForSeconds _waitForSeconds5 = new WaitForSeconds(5f);
     [SerializeField]
     private GameObject panelEleccion, buttonsPanel, panelCargando;
+    [SerializeField]
+    private List<Button> capituloButtons;
     [SerializeField]
     private Button capFinal_btn;
     [SerializeField]
@@ -26,17 +29,55 @@ public class ReaderController : MonoBehaviour
     public bool todosLeidos = false;
 
     [Header("Test")]
-    [SerializeField] int capituloTestId = 0; 
+    [SerializeField] int capituloTestId = 0;
 
 
     void Start()
     {
+        // Inicializar todos en false
         foreach (var capitulo in capitulosData)
-        {
             capitulo.fueLeido = false;
-        }
+
+        // Recuperar progreso si hay
+        if (GameManager.Instance.isContinuingGame)
+        {
+            bool[] progreso = GameManager.Instance.CargarProgreso(capitulosData.Count);
+            for (int i = 0; i < progreso.Length; i++)
+                capitulosData[i].fueLeido = progreso[i];
+
+            panelEleccion.SetActive(true);
+
+            // Desactivar botones de capítulos leídos
+            for (int i = 0; i < capituloButtons.Count && i < capitulosData.Count; i++)
+            {
+                if (capitulosData[i].fueLeido)
+                {
+                    capituloButtons[i].gameObject.SetActive(false); //interactable = false;
+                    var colors = capituloButtons[i].colors;
+                    colors.normalColor = Color.gray;
+                    capituloButtons[i].colors = colors;
+                }
+            }
         
-        ElegirCapitulo(idCapituloActual);
+        }
+        else
+        {
+            ElegirCapitulo(idCapituloActual);
+        }
+    }
+
+    private void GuardarProgreso()
+    {
+        bool[] estado = new bool[capitulosData.Count];
+        for (int i = 0; i < capitulosData.Count; i++)
+            estado[i] = capitulosData[i].fueLeido;
+
+        GameManager.Instance.GuardarProgreso(estado);
+    }
+
+    public void DeleteData()
+    {
+        GameManager.Instance.ResetProgress();
     }
 
     public void ElegirCapitulo(int idCapitulo)
@@ -131,7 +172,8 @@ public class ReaderController : MonoBehaviour
 
     IEnumerator WaitReading()
     {
-        yield return new WaitForSeconds(5f);
+        yield return _waitForSeconds5;
+        GuardarProgreso();
         buttonsPanel.SetActive(true);
         VerificarProgreso();
     }
@@ -148,14 +190,14 @@ public class ReaderController : MonoBehaviour
             }
         }
 
-        Debug.Log($"Capítulos leídos antes del actual: {totalLeidos} de {capitulosData.Count-1}");
+        Debug.Log($"Capítulos leídos antes del actual: {totalLeidos} de {capitulosData.Count - 1}");
 
         // Penultimo
         if (totalLeidos.ToString() == (capitulosData.Count - 2).ToString())
         {
             capFinal_btn.gameObject.SetActive(true);
         }
-        else if (totalLeidos == capitulosData.Count-1)
+        else if (totalLeidos == capitulosData.Count - 1)
         {
             capFinal_btn.gameObject.SetActive(false);
             SceneManager.LoadScene("2_Creditos");
@@ -200,35 +242,35 @@ public class ReaderController : MonoBehaviour
 
     #region Editor Test Methods
 
-[ContextMenu("Cargar Sprites de Capítulo en Modo Edición")]
-private void TestCargarSpritesEditor()
-{
-    if (capitulosData.Count == 0) return;
+    [ContextMenu("Cargar Sprites de Capítulo en Modo Edición")]
+    private void TestCargarSpritesEditor()
+    {
+        if (capitulosData.Count == 0) return;
 
-    int idCapitulo = capituloTestId; // Cambia para probar otros capítulos
-    titulo.text = capitulosData[idCapitulo].nombreCapitulo;
+        int idCapitulo = capituloTestId; // Cambia para probar otros capítulos
+        titulo.text = capitulosData[idCapitulo].nombreCapitulo;
 
-    if (escenario1 != null) escenario1.sprite = capitulosData[idCapitulo].sprite[0];
-    if (escenario2 != null) escenario2.sprite = capitulosData[idCapitulo].sprite[1];
-    if (escenario3 != null) escenario3.sprite = capitulosData[idCapitulo].sprite[2];
-    if (escenario4 != null) escenario4.sprite = capitulosData[idCapitulo].sprite[3];
+        if (escenario1 != null) escenario1.sprite = capitulosData[idCapitulo].sprite[0];
+        if (escenario2 != null) escenario2.sprite = capitulosData[idCapitulo].sprite[1];
+        if (escenario3 != null) escenario3.sprite = capitulosData[idCapitulo].sprite[2];
+        if (escenario4 != null) escenario4.sprite = capitulosData[idCapitulo].sprite[3];
 
-    Debug.Log("Sprites del capítulo cargados en modo edición");
-}
+        Debug.Log("Sprites del capítulo cargados en modo edición");
+    }
 
-[ContextMenu("Descargar Sprites de Escenarios")]
-private void TestDescargarSpritesEditor()
-{
-    if (escenario1 != null) escenario1.sprite = null;
-    if (escenario2 != null) escenario2.sprite = null;
-    if (escenario3 != null) escenario3.sprite = null;
-    if (escenario4 != null) escenario4.sprite = null;
+    [ContextMenu("Descargar Sprites de Escenarios")]
+    private void TestDescargarSpritesEditor()
+    {
+        if (escenario1 != null) escenario1.sprite = null;
+        if (escenario2 != null) escenario2.sprite = null;
+        if (escenario3 != null) escenario3.sprite = null;
+        if (escenario4 != null) escenario4.sprite = null;
 
-    titulo.text = "";
+        titulo.text = "";
 
-    Debug.Log("Sprites descargados de los escenarios");
-}
+        Debug.Log("Sprites descargados de los escenarios");
+    }
 
-#endregion
+    #endregion
 
 }

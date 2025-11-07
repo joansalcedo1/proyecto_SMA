@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 52.125, y: -37.79586}
+  m_AnchoredPosition: {x: 52.125, y: -37.795837}
   m_SizeDelta: {x: -104.25, y: -200.3643}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4057266643283075965
@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 62108753200760781}
   - component: {fileID: 2373549399909238627}
   - component: {fileID: 7199971840102335650}
+  - component: {fileID: 3488625756097503517}
   m_Layer: 5
   m_Name: Ajustes_btn
   m_TagString: Untagged
@@ -245,7 +246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -56.7, y: -71.9}
+  m_AnchoredPosition: {x: -56.700012, y: -71.900024}
   m_SizeDelta: {x: 54.72888, y: 51.492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7302517151581245766
@@ -342,6 +343,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 3488625756097503517}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &7199971840102335650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +370,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: -6.28, y: -5.66}
   m_UseGraphicAlpha: 1
+--- !u!114 &3488625756097503517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773064615778035515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 2349bac75ae2bee41b45a40dd6f341be, type: 3}
 --- !u!1 &5380417104427138553
 GameObject:
   m_ObjectHideFlags: 0

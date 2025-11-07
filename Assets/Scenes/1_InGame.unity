@@ -432,6 +432,7 @@ GameObject:
   - component: {fileID: 75220104}
   - component: {fileID: 75220103}
   - component: {fileID: 75220102}
+  - component: {fileID: 75220105}
   m_Layer: 5
   m_Name: BotonCap6
   m_TagString: Untagged
@@ -531,6 +532,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75220105}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75220103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,6 +582,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75220100}
   m_CullTransparentMesh: 1
+--- !u!114 &75220105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75220100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &80033214
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +844,7 @@ GameObject:
   - component: {fileID: 108872108}
   - component: {fileID: 108872107}
   - component: {fileID: 108872106}
+  - component: {fileID: 108872109}
   m_Layer: 5
   m_Name: Volver
   m_TagString: Untagged
@@ -901,6 +928,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 108872109}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &108872107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,6 +978,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108872104}
   m_CullTransparentMesh: 1
+--- !u!114 &108872109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108872104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &120300176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1236,15 @@ MonoBehaviour:
   panelEleccion: {fileID: 1965647561}
   buttonsPanel: {fileID: 607361240}
   panelCargando: {fileID: 120300176}
+  capituloButtons:
+  - {fileID: 585671467}
+  - {fileID: 1540794049}
+  - {fileID: 309196111}
+  - {fileID: 1014811928}
+  - {fileID: 508902799}
+  - {fileID: 1422682761}
+  - {fileID: 654921612}
+  - {fileID: 108872106}
   capFinal_btn: {fileID: 654921612}
   capitulosData:
   - {fileID: 11400000, guid: dadb9847d6deb354d89df3f0a690f999, type: 2}
@@ -1597,6 +1658,7 @@ GameObject:
   - component: {fileID: 193208368}
   - component: {fileID: 193208367}
   - component: {fileID: 193208366}
+  - component: {fileID: 193208369}
   m_Layer: 5
   m_Name: BotonCap8
   m_TagString: Untagged
@@ -1696,6 +1758,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75220105}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &193208367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1734,6 +1808,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193208364}
   m_CullTransparentMesh: 1
+--- !u!114 &193208369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193208364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &220182649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,6 +2392,7 @@ GameObject:
   - component: {fileID: 268856828}
   - component: {fileID: 268856827}
   - component: {fileID: 268856826}
+  - component: {fileID: 268856829}
   m_Layer: 5
   m_Name: BotonCap3
   m_TagString: Untagged
@@ -2404,6 +2492,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75220105}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &268856827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2442,6 +2542,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268856824}
   m_CullTransparentMesh: 1
+--- !u!114 &268856829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268856824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &280607613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,6 +2907,7 @@ GameObject:
   - component: {fileID: 309196113}
   - component: {fileID: 309196112}
   - component: {fileID: 309196111}
+  - component: {fileID: 309196114}
   m_Layer: 5
   m_Name: Rio Cali
   m_TagString: Untagged
@@ -2889,6 +3003,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 309196114}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &309196112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2927,6 +3053,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309196109}
   m_CullTransparentMesh: 1
+--- !u!114 &309196114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309196109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &315687326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,6 +4144,7 @@ GameObject:
   - component: {fileID: 508902801}
   - component: {fileID: 508902800}
   - component: {fileID: 508902799}
+  - component: {fileID: 508902802}
   m_Layer: 5
   m_Name: Biblioteca
   m_TagString: Untagged
@@ -4100,6 +4240,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 309196114}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &508902800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4138,6 +4290,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508902797}
   m_CullTransparentMesh: 1
+--- !u!114 &508902802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508902797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4422,6 +4587,7 @@ GameObject:
   - component: {fileID: 557563374}
   - component: {fileID: 557563376}
   - component: {fileID: 557563375}
+  - component: {fileID: 557563377}
   m_Layer: 5
   m_Name: Flecha
   m_TagString: Untagged
@@ -4461,14 +4627,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4d6fefe35149bd54d89c575351395196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4486,6 +4652,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557563373}
   m_CullTransparentMesh: 1
+--- !u!114 &557563377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557563373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6.19, y: -4.62}
+  m_UseGraphicAlpha: 1
 --- !u!1 &561420021
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,6 +4754,7 @@ GameObject:
   - component: {fileID: 585671469}
   - component: {fileID: 585671468}
   - component: {fileID: 585671467}
+  - component: {fileID: 585671470}
   m_Layer: 5
   m_Name: Boulevard
   m_TagString: Untagged
@@ -4668,6 +4850,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 585671470}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &585671468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4706,6 +4900,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585671465}
   m_CullTransparentMesh: 1
+--- !u!114 &585671470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585671465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &588584725
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,6 +4999,7 @@ GameObject:
   - component: {fileID: 591272790}
   - component: {fileID: 591272792}
   - component: {fileID: 591272791}
+  - component: {fileID: 591272793}
   m_Layer: 5
   m_Name: Flecha
   m_TagString: Untagged
@@ -4831,14 +5039,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4d6fefe35149bd54d89c575351395196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4856,6 +5064,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591272789}
   m_CullTransparentMesh: 1
+--- !u!114 &591272793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591272789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6.19, y: -4.62}
+  m_UseGraphicAlpha: 1
 --- !u!1 &593772733
 GameObject:
   m_ObjectHideFlags: 0
@@ -5324,6 +5547,7 @@ GameObject:
   - component: {fileID: 654921614}
   - component: {fileID: 654921613}
   - component: {fileID: 654921612}
+  - component: {fileID: 654921615}
   m_Layer: 5
   m_Name: Taller
   m_TagString: Untagged
@@ -5419,6 +5643,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 309196114}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 108872104}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -5469,6 +5705,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654921610}
   m_CullTransparentMesh: 1
+--- !u!114 &654921615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654921610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &728427858
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,6 +5806,7 @@ GameObject:
   - component: {fileID: 743603759}
   - component: {fileID: 743603758}
   - component: {fileID: 743603757}
+  - component: {fileID: 743603760}
   m_Layer: 5
   m_Name: BotonCap4
   m_TagString: Untagged
@@ -5656,6 +5906,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75220105}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &743603758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5694,6 +5956,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743603755}
   m_CullTransparentMesh: 1
+--- !u!114 &743603760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743603755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &762231137
 GameObject:
   m_ObjectHideFlags: 0
@@ -5780,6 +6055,7 @@ GameObject:
   - component: {fileID: 763889832}
   - component: {fileID: 763889834}
   - component: {fileID: 763889833}
+  - component: {fileID: 763889835}
   m_Layer: 5
   m_Name: Flecha
   m_TagString: Untagged
@@ -5819,14 +6095,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4d6fefe35149bd54d89c575351395196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5844,6 +6120,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763889831}
   m_CullTransparentMesh: 1
+--- !u!114 &763889835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763889831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6.19, y: -4.62}
+  m_UseGraphicAlpha: 1
 --- !u!1 &769068504
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,6 +6146,7 @@ GameObject:
   - component: {fileID: 769068505}
   - component: {fileID: 769068507}
   - component: {fileID: 769068506}
+  - component: {fileID: 769068508}
   m_Layer: 5
   m_Name: Flecha
   m_TagString: Untagged
@@ -5894,14 +6186,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4d6fefe35149bd54d89c575351395196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5919,6 +6211,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769068504}
   m_CullTransparentMesh: 1
+--- !u!114 &769068508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769068504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6.19, y: -4.62}
+  m_UseGraphicAlpha: 1
 --- !u!1 &769471486
 GameObject:
   m_ObjectHideFlags: 0
@@ -6540,6 +6847,7 @@ GameObject:
   - component: {fileID: 956350801}
   - component: {fileID: 956350800}
   - component: {fileID: 956350799}
+  - component: {fileID: 956350802}
   m_Layer: 5
   m_Name: BotonCap2
   m_TagString: Untagged
@@ -6639,6 +6947,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75220105}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &956350800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6677,6 +6997,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956350797}
   m_CullTransparentMesh: 1
+--- !u!114 &956350802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956350797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &959065580
 GameObject:
   m_ObjectHideFlags: 0
@@ -7322,6 +7655,7 @@ GameObject:
   - component: {fileID: 1014811930}
   - component: {fileID: 1014811929}
   - component: {fileID: 1014811928}
+  - component: {fileID: 1014811931}
   m_Layer: 5
   m_Name: Pascual Guerrero
   m_TagString: Untagged
@@ -7417,6 +7751,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 309196114}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1014811929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7455,6 +7801,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014811926}
   m_CullTransparentMesh: 1
+--- !u!114 &1014811931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014811926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &1063475459
 GameObject:
   m_ObjectHideFlags: 0
@@ -7649,6 +8008,7 @@ GameObject:
   - component: {fileID: 1096590008}
   - component: {fileID: 1096590010}
   - component: {fileID: 1096590009}
+  - component: {fileID: 1096590011}
   m_Layer: 5
   m_Name: Flecha
   m_TagString: Untagged
@@ -7688,14 +8048,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4d6fefe35149bd54d89c575351395196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7713,6 +8073,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096590007}
   m_CullTransparentMesh: 1
+--- !u!114 &1096590011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096590007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6.19, y: -4.62}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1134861156
 GameObject:
   m_ObjectHideFlags: 0
@@ -7724,6 +8099,7 @@ GameObject:
   - component: {fileID: 1134861157}
   - component: {fileID: 1134861159}
   - component: {fileID: 1134861158}
+  - component: {fileID: 1134861160}
   m_Layer: 5
   m_Name: Flecha
   m_TagString: Untagged
@@ -7763,14 +8139,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4d6fefe35149bd54d89c575351395196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7788,6 +8164,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134861156}
   m_CullTransparentMesh: 1
+--- !u!114 &1134861160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134861156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6.19, y: -4.62}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1170017323
 GameObject:
   m_ObjectHideFlags: 0
@@ -8039,6 +8430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option menu
       objectReference: {fileID: 0}
+    - target: {fileID: 8089403085985218500, guid: 81cc820547cd01a468bd6db07a7ebf40, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 141095804}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8192,6 +8587,7 @@ GameObject:
   - component: {fileID: 1375366159}
   - component: {fileID: 1375366158}
   - component: {fileID: 1375366157}
+  - component: {fileID: 1375366160}
   m_Layer: 5
   m_Name: BotonCap1
   m_TagString: Untagged
@@ -8291,6 +8687,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75220105}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1375366158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8329,6 +8737,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375366155}
   m_CullTransparentMesh: 1
+--- !u!114 &1375366160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375366155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &1396071207
 GameObject:
   m_ObjectHideFlags: 0
@@ -8552,6 +8973,7 @@ GameObject:
   - component: {fileID: 1422682763}
   - component: {fileID: 1422682762}
   - component: {fileID: 1422682761}
+  - component: {fileID: 1422682764}
   m_Layer: 5
   m_Name: La Merced
   m_TagString: Untagged
@@ -8647,6 +9069,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 309196114}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1422682762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8685,6 +9119,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422682759}
   m_CullTransparentMesh: 1
+--- !u!114 &1422682764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422682759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &1440918794
 GameObject:
   m_ObjectHideFlags: 0
@@ -8697,6 +9144,7 @@ GameObject:
   - component: {fileID: 1440918798}
   - component: {fileID: 1440918797}
   - component: {fileID: 1440918796}
+  - component: {fileID: 1440918799}
   m_Layer: 5
   m_Name: BotonCap5
   m_TagString: Untagged
@@ -8796,6 +9244,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75220105}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1440918797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8834,6 +9294,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440918794}
   m_CullTransparentMesh: 1
+--- !u!114 &1440918799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440918794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &1457327026
 GameObject:
   m_ObjectHideFlags: 0
@@ -9389,6 +9862,7 @@ GameObject:
   - component: {fileID: 1511995232}
   - component: {fileID: 1511995234}
   - component: {fileID: 1511995233}
+  - component: {fileID: 1511995235}
   m_Layer: 5
   m_Name: Flecha
   m_TagString: Untagged
@@ -9428,14 +9902,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4d6fefe35149bd54d89c575351395196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9453,6 +9927,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511995231}
   m_CullTransparentMesh: 1
+--- !u!114 &1511995235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511995231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6.19, y: -4.62}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1513899744
 GameObject:
   m_ObjectHideFlags: 0
@@ -9873,6 +10362,7 @@ GameObject:
   - component: {fileID: 1540794051}
   - component: {fileID: 1540794050}
   - component: {fileID: 1540794049}
+  - component: {fileID: 1540794052}
   m_Layer: 5
   m_Name: San Antonio
   m_TagString: Untagged
@@ -9968,6 +10458,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 585671470}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1540794050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10006,6 +10508,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540794047}
   m_CullTransparentMesh: 1
+--- !u!114 &1540794052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540794047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &1554284554
 GameObject:
   m_ObjectHideFlags: 0
@@ -10365,6 +10880,7 @@ GameObject:
   - component: {fileID: 1631152390}
   - component: {fileID: 1631152392}
   - component: {fileID: 1631152391}
+  - component: {fileID: 1631152393}
   m_Layer: 5
   m_Name: Flecha
   m_TagString: Untagged
@@ -10404,14 +10920,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4d6fefe35149bd54d89c575351395196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10429,6 +10945,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631152389}
   m_CullTransparentMesh: 1
+--- !u!114 &1631152393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631152389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6.19, y: -4.62}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1720822594
 GameObject:
   m_ObjectHideFlags: 0
@@ -11259,6 +11790,7 @@ GameObject:
   - component: {fileID: 2015082596}
   - component: {fileID: 2015082595}
   - component: {fileID: 2015082594}
+  - component: {fileID: 2015082597}
   m_Layer: 5
   m_Name: BotonCap7
   m_TagString: Untagged
@@ -11358,6 +11890,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75220105}
+        m_TargetAssemblyTypeName: OneShootAudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2015082595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11396,6 +11940,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015082592}
   m_CullTransparentMesh: 1
+--- !u!114 &2015082597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015082592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a638622b548041ab1e26b2dcbb433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneShootAudioManager
+  clip: {fileID: 8300000, guid: 7e47dd7cbc746b94da2826a75a245076, type: 3}
 --- !u!1 &2045542513
 GameObject:
   m_ObjectHideFlags: 0
