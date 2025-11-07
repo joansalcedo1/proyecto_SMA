@@ -20,9 +20,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 96e9898467170e54c8fc7d1e28be561a, type: 3}
   - {fileID: 21300000, guid: 36c0e5069bad5b14bbba713bbfcd29b6, type: 3}
   interactbleObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fueLeido: 0
+  - {fileID: 1949700389664344075, guid: 471f326a0553f4b45970fae55e4c8fd7, type: 3}
+  - {fileID: 1949700389664344075, guid: 748cfd5ed9ed5b047a7330a3951829eb, type: 3}
+  - {fileID: 1949700389664344075, guid: 618385b5ea4a3174aa684cfd088d84f8, type: 3}
+  - {fileID: 1949700389664344075, guid: a4d48813a6007ff43b0b6021eff65584, type: 3}
+  fueLeido: 1
   esCapituloFinal: 1
+  musicaDeFondo: {fileID: 8300000, guid: 62fb0fc2d1ef1f44ab76ff07f87771ee, type: 3}
+  ambienteSonoro: {fileID: 8300000, guid: 1f048e1653c8a9c4baad54dfc12319b3, type: 3}

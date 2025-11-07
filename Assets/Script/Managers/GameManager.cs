@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager Instance { get; private set; }
+
+    void Awake()
     {
-        
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // ← Sobrevive al cambio de escena
     }
 
-    // Update is called once per frame
-    void Update()
+    public AudioSource audioSource;
+    
+    public void OneShootAudio(AudioClip clip)
     {
-        
+        audioSource.PlayOneShot(clip);
     }
 }
