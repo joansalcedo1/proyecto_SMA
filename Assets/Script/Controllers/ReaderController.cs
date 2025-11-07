@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework.Internal;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ReaderController : MonoBehaviour
@@ -30,12 +31,15 @@ public class ReaderController : MonoBehaviour
 
     void Start()
     {
-        //panelEleccion.SetActive(true);
-        //titulo.text = capitulosData[idCapituloActual].nombreCapitulo;
+        foreach (var capitulo in capitulosData)
+        {
+            capitulo.fueLeido = false;
+        }
+        
         ElegirCapitulo(idCapituloActual);
     }
 
-    public void ElegirCapitulo(int idCapitulo) //Este método está sujeto a cambios futuros
+    public void ElegirCapitulo(int idCapitulo)
     {
         StartCoroutine(ElegirCapituloCoroutine(idCapitulo));
     }
@@ -54,10 +58,9 @@ public class ReaderController : MonoBehaviour
             };
         }
 
-        // Mostrar panel de carga
         panelCargando.SetActive(true);
 
-        yield return null; // Esperar un frame para que se muestre el panel
+        yield return null;
 
         if (idCapitulo >= 0 && idCapitulo < capitulosData.Count)
         {
@@ -80,14 +83,12 @@ public class ReaderController : MonoBehaviour
                 PlayAmbience(capitulosData[idCapitulo].ambienteSonoro);
             }
 
-            // Desactivar todos los interactivos previos
             interactivosInstanciados.ForEach(obj => obj.SetActive(false));
 
-            // Invocar interactivos
             for (int i = 0; i < 4; i++)
             {
                 InstanciadorInteractivos(idCapitulo, i + 1, GetEscenarioPorIndice(i));
-                yield return null; // Espera un frame para dar tiempo a que se renderice
+                yield return null;
             }
 
             StartCoroutine(WaitReading());
@@ -99,7 +100,6 @@ public class ReaderController : MonoBehaviour
             Debug.LogWarning($"ID de capítulo {idCapitulo} fuera de rango");
         }
 
-        // Ocultar panel de carga
         panelCargando.SetActive(false);
     }
 
@@ -108,17 +108,14 @@ public class ReaderController : MonoBehaviour
     {
         string nombreObjeto = capitulosData[idCapitulo].nombreCapitulo + idEscenario;
 
-        // Buscar si ya existe como hijo de escenario
         Transform objetoExistente = escenario.transform.Find(nombreObjeto);
 
         if (objetoExistente != null)
         {
-            // Si ya existe, solo activarlo
             objetoExistente.gameObject.SetActive(true);
         }
         else
         {
-            // Si no existe, instanciar el prefab
             GameObject prefab = capitulosData[idCapitulo].interactbleObjects[idEscenario - 1];
             if (prefab == null)
             {
@@ -127,7 +124,7 @@ public class ReaderController : MonoBehaviour
             }
 
             GameObject instancia = Instantiate(prefab, escenario.transform);
-            instancia.name = nombreObjeto; // Asignar el nombre
+            instancia.name = nombreObjeto;
             interactivosInstanciados.Add(instancia);
         }
     }
@@ -141,20 +138,27 @@ public class ReaderController : MonoBehaviour
 
     void VerificarProgreso()
     {
-        foreach (var capitulo in capitulosData)
-        {
-            if (capitulo.esCapituloFinal) continue; // Saltar el capítulo final
-            if (!capitulo.fueLeido) todosLeidos = false;
-        }
-        todosLeidos = true;
+        int totalLeidos = 0;
 
-        if (todosLeidos)
+        for (int i = 0; i < idCapituloActual; i++)
+        {
+            if (capitulosData[i].fueLeido)
+            {
+                totalLeidos++;
+            }
+        }
+
+        Debug.Log($"Capítulos leídos antes del actual: {totalLeidos} de {capitulosData.Count-1}");
+
+        // Penultimo
+        if (totalLeidos.ToString() == (capitulosData.Count - 2).ToString())
         {
             capFinal_btn.gameObject.SetActive(true);
         }
-        else
+        else if (totalLeidos == capitulosData.Count-1)
         {
             capFinal_btn.gameObject.SetActive(false);
+            SceneManager.LoadScene("2_Creditos");
         }
     }
 
