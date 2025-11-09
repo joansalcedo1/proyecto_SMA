@@ -167,6 +167,7 @@ public class ReaderController : MonoBehaviour
             GameObject instancia = Instantiate(prefab, escenario.transform);
             instancia.name = nombreObjeto;
             interactivosInstanciados.Add(instancia);
+            Debug.Log("este es un objeto interactivo: "+nombreObjeto);
         }
     }
 
