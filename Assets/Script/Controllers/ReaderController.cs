@@ -15,12 +15,9 @@ public class ReaderController : MonoBehaviour
     private List<Button> capituloButtons;
     [SerializeField]
     private Button capFinal_btn;
+    public List<ScriptableCapituloData> capitulosData;
     [SerializeField]
-    private List<ScriptableCapituloData> capitulosData;
-    [SerializeField]
-    public TextMeshProUGUI titulo, cantidadLeidos, nombreUsuario;
-    [SerializeField]
-    private GameObject panelPerfil;
+    public TextMeshProUGUI titulo;
     public Image escenario1, escenario2, escenario3, escenario4;
     public int idCapituloActual = 0;
 
@@ -201,6 +198,7 @@ public class ReaderController : MonoBehaviour
         // Penultimo
         if (totalLeidos.ToString() == (capitulosData.Count - 2).ToString())
         {
+            Debug.Log("Activando el ultimo capitulo");
             capFinal_btn.gameObject.SetActive(true);
         }
         else if (totalLeidos == capitulosData.Count - 1)
@@ -245,24 +243,6 @@ public class ReaderController : MonoBehaviour
         // verificarUltimoCap(true);
     }
     #endregion
-    private void Update()
-    {
-        int capLeidos = 0;
-
-        for (int i = 0; i < idCapituloActual; i++)
-        {
-            if (capitulosData[i].fueLeido)
-            {
-                capLeidos++;
-
-            }
-        }
-        if (panelPerfil.activeSelf)
-        {
-            nombreUsuario.text = SystemInfo.deviceName;
-            cantidadLeidos.text = $"{capLeidos}/{capitulosData.Count-1}";
-        }
-    }
 
     #region Editor Test Methods
 
