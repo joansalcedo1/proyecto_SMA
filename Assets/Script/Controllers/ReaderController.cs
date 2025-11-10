@@ -18,8 +18,9 @@ public class ReaderController : MonoBehaviour
     [SerializeField]
     private List<ScriptableCapituloData> capitulosData;
     [SerializeField]
-    public TextMeshProUGUI titulo;
-
+    public TextMeshProUGUI titulo, cantidadLeidos, nombreUsuario;
+    [SerializeField]
+    private GameObject panelPerfil;
     public Image escenario1, escenario2, escenario3, escenario4;
     public int idCapituloActual = 0;
 
@@ -30,7 +31,9 @@ public class ReaderController : MonoBehaviour
 
     [Header("Test")]
     [SerializeField] int capituloTestId = 0;
+    
 
+   
 
     void Start()
     {
@@ -167,7 +170,6 @@ public class ReaderController : MonoBehaviour
             GameObject instancia = Instantiate(prefab, escenario.transform);
             instancia.name = nombreObjeto;
             interactivosInstanciados.Add(instancia);
-            Debug.Log("este es un objeto interactivo: "+nombreObjeto);
         }
     }
 
@@ -188,8 +190,11 @@ public class ReaderController : MonoBehaviour
             if (capitulosData[i].fueLeido)
             {
                 totalLeidos++;
+                
             }
         }
+
+        
 
         Debug.Log($"Capítulos leídos antes del actual: {totalLeidos} de {capitulosData.Count - 1}");
 
@@ -240,6 +245,24 @@ public class ReaderController : MonoBehaviour
         // verificarUltimoCap(true);
     }
     #endregion
+    private void Update()
+    {
+        int capLeidos = 0;
+
+        for (int i = 0; i < idCapituloActual; i++)
+        {
+            if (capitulosData[i].fueLeido)
+            {
+                capLeidos++;
+
+            }
+        }
+        if (panelPerfil.activeSelf)
+        {
+            nombreUsuario.text = SystemInfo.deviceName;
+            cantidadLeidos.text = $"{capLeidos}/{capitulosData.Count-1}";
+        }
+    }
 
     #region Editor Test Methods
 
