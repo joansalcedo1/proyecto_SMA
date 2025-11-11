@@ -24,7 +24,7 @@ MonoBehaviour:
   - {fileID: 1949700389664344075, guid: 885fb13a095a7344baeec685d1b54bb4, type: 3}
   - {fileID: 1949700389664344075, guid: 90c11d7ced7dfdd4592de34048575d48, type: 3}
   - {fileID: 1949700389664344075, guid: 128ff253c99a1b641862ac367fe25c42, type: 3}
-  fueLeido: 1
+  fueLeido: 0
   esCapituloFinal: 0
   musicaDeFondo: {fileID: 8300000, guid: 37f065d9565534a4da79e98c70a128ab, type: 3}
   ambienteSonoro: {fileID: 8300000, guid: 5fcc7f1b911ecf548a3889ff1166a071, type: 3}

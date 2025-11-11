@@ -8,9 +8,10 @@ using UnityEngine.UI;
 
 public class ReaderController : MonoBehaviour
 {
-    private static WaitForSeconds _waitForSeconds5 = new WaitForSeconds(5f);
+    public float _waitSeconds = 5f;
+    private static WaitForSeconds _waitForSeconds5;
     [SerializeField]
-    private GameObject panelEleccion, buttonsPanel, panelCargando;
+    private GameObject panelEleccion, buttonsPanel, panelCargando, panelLogros;
     [SerializeField]
     private List<Button> capituloButtons;
     [SerializeField]
@@ -27,10 +28,13 @@ public class ReaderController : MonoBehaviour
     public bool todosLeidos = false;
 
     [Header("Test")]
-    [SerializeField] int capituloTestId = 0;
-    
+    [SerializeField, Range(0, 7)] int capituloTestId = 0;
 
-   
+
+    void Awake()
+    {
+        _waitForSeconds5 = new WaitForSeconds(_waitSeconds);
+    }
 
     void Start()
     {
@@ -70,7 +74,13 @@ public class ReaderController : MonoBehaviour
     {
         bool[] estado = new bool[capitulosData.Count];
         for (int i = 0; i < capitulosData.Count; i++)
+        {
             estado[i] = capitulosData[i].fueLeido;
+            if(estado[i] == true && idCapituloActual == i)
+            {
+                StartCoroutine(MostrarLogros(idCapituloActual-1));
+            }
+        }
 
         GameManager.Instance.GuardarProgreso(estado);
     }
@@ -187,11 +197,8 @@ public class ReaderController : MonoBehaviour
             if (capitulosData[i].fueLeido)
             {
                 totalLeidos++;
-                
             }
         }
-
-        
 
         Debug.Log($"Capítulos leídos antes del actual: {totalLeidos} de {capitulosData.Count - 1}");
 
@@ -208,6 +215,15 @@ public class ReaderController : MonoBehaviour
         }
     }
 
+    IEnumerator MostrarLogros(int indice)
+    {
+        LogroHandle logroHandle = panelLogros.GetComponent<LogroHandle>();
+        logroHandle.indiceSprite = indice;
+        panelLogros.SetActive(true);
+        yield return new WaitForSeconds(logroHandle.duracionVisible);
+        logroHandle.indiceSprite = indice + 8;
+        panelLogros.SetActive(true);
+    }
     #region Audios
     public void PlayMusic(AudioClip clip)
     {

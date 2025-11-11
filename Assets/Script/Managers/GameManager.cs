@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -85,10 +86,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void ResetProgress()
     {
-        PlayerPrefs.DeleteKey(FIRST_TIME_KEY);
-        PlayerPrefs.DeleteKey(LECTURA_KEY);
+        PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
         Debug.Log("🧹 Progreso reiniciado");
+        SceneManager.LoadScene(0);
     }
 
     [Serializable]
